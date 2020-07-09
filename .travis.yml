@@ -14,3 +14,9 @@ before_install:
 
 script:
     - make all coveralls
+    
+jobs:
+    exclude:
+        - os: linux
+          arch: arm64
+          go: 1.11.x
